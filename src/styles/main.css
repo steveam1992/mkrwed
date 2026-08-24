@@ -1,0 +1,492 @@
+/* ==========================================================================
+   Estilos base y sistema visual del sitio.
+   Los colores de marca viven en :root. Cada pagina de producto sobreescribe
+   --accent con el color del producto (ver Producto.vue).
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Marca */
+  --brand: #5b49e5;
+  --brand-dark: #4536c4;
+  --brand-soft: #efedff;
+
+  /* Fondos oscuros (hero, footer) */
+  --ink: #0c1024;
+  --ink-2: #151b34;
+  --ink-3: #232a49;
+
+  /* Texto */
+  --text-1: #171d2e;
+  --text-2: #56607a;
+  --text-3: #8b93a8;
+  --on-dark-1: #ffffff;
+  --on-dark-2: #b9c0d8;
+
+  /* Superficies */
+  --surface: #ffffff;
+  --surface-2: #f6f7fc;
+  --border: #e5e8f2;
+
+  /* Acento variable: lo cambia cada producto */
+  --accent: var(--brand);
+  --accent-dark: var(--brand-dark);
+  --accent-soft: var(--brand-soft);
+
+  --radius: 20px;
+  --radius-sm: 12px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 2px 10px rgba(12, 16, 36, 0.05);
+  --shadow: 0 14px 34px -12px rgba(12, 16, 36, 0.16);
+  --shadow-lg: 0 40px 70px -28px rgba(12, 16, 36, 0.4);
+
+  --maxw: 1140px;
+  --nav-h: 68px;
+
+  --font-body: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-display: 'Sora', 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* para que las anclas no queden debajo del header fijo */
+  scroll-padding-top: calc(var(--nav-h) + 16px);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-1);
+  background: var(--surface);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  color: var(--text-1);
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ---------- Tipografia ---------- */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--text-1);
+}
+
+h1 {
+  font-size: clamp(2.1rem, 5vw, 3.4rem);
+}
+
+h2 {
+  font-size: clamp(1.6rem, 3.4vw, 2.4rem);
+}
+
+h3 {
+  font-size: 1.12rem;
+  letter-spacing: -0.01em;
+}
+
+.lede {
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  color: var(--text-2);
+  max-width: 60ch;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.on-dark {
+  color: var(--on-dark-1);
+}
+
+.on-dark h1,
+.on-dark h2,
+.on-dark h3 {
+  color: var(--on-dark-1);
+}
+
+.on-dark .lede {
+  color: var(--on-dark-2);
+}
+
+/* ---------- Estructura ---------- */
+
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: clamp(56px, 8vw, 104px) 0;
+}
+
+.section--tight {
+  padding: clamp(40px, 5vw, 64px) 0;
+}
+
+.section--alt {
+  background: var(--surface-2);
+}
+
+.section--dark {
+  background: var(--ink);
+  color: var(--on-dark-1);
+}
+
+.section__head {
+  max-width: 62ch;
+  margin-bottom: clamp(28px, 4vw, 48px);
+}
+
+.section__head h2 {
+  margin: 10px 0 14px;
+}
+
+.section__head--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.grid--2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid--3 {
+  grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+}
+
+.grid--4 {
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+/* ---------- Botones ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  height: 48px;
+  padding: 0 22px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.btn svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 10px 24px -10px color-mix(in srgb, var(--accent) 75%, transparent);
+}
+
+.btn--primary:hover {
+  background: var(--accent-dark);
+}
+
+.btn--dark {
+  background: var(--ink);
+  color: #fff;
+}
+
+.btn--dark:hover {
+  background: var(--ink-2);
+}
+
+.btn--outline {
+  border: 1.5px solid var(--border);
+  color: var(--text-1);
+  background: var(--surface);
+}
+
+.btn--outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn--ghost-light {
+  border: 1.5px solid rgba(255, 255, 255, 0.28);
+  color: #fff;
+}
+
+.btn--ghost-light:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn--wa {
+  background: #25d366;
+  color: #06301a;
+}
+
+.btn--wa:hover {
+  background: #1fbc5a;
+}
+
+.btn--sm {
+  height: 40px;
+  padding: 0 16px;
+  font-size: 0.88rem;
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Enlace con flecha */
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.link-arrow svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.18s ease;
+}
+
+.link-arrow:hover svg {
+  transform: translateX(4px);
+}
+
+/* ---------- Tarjetas ---------- */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px;
+  box-shadow: var(--shadow-sm);
+}
+
+.card--flat {
+  box-shadow: none;
+}
+
+.card--dark {
+  background: var(--ink-2);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: var(--on-dark-1);
+  box-shadow: none;
+}
+
+/* Icono cuadrado de tarjeta */
+.icon-box {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  margin-bottom: 16px;
+  flex: none;
+}
+
+.icon-box--dark {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+/* ---------- Pildoras y listas ---------- */
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 30px;
+  padding: 0 13px;
+  border-radius: var(--radius-pill);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-2);
+}
+
+.pill--accent {
+  background: var(--accent-soft);
+  border-color: transparent;
+  color: var(--accent-dark);
+}
+
+.pill--light {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.16);
+  color: #fff;
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.checklist {
+  list-style: none;
+  display: grid;
+  gap: 11px;
+}
+
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  color: var(--text-2);
+}
+
+.checklist svg {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  margin-top: 2px;
+  color: var(--accent);
+}
+
+.on-dark .checklist li {
+  color: var(--on-dark-2);
+}
+
+.on-dark .checklist svg {
+  color: #fff;
+}
+
+/* ---------- Utilidades ---------- */
+
+.muted {
+  color: var(--text-2);
+}
+
+.small {
+  font-size: 0.85rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.mt-s {
+  margin-top: 12px;
+}
+
+.mt-m {
+  margin-top: 24px;
+}
+
+.mt-l {
+  margin-top: 40px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

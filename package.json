@@ -1,0 +1,25 @@
+{
+  "name": "mkr-web",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Sitio web de MKR Solutions: catalogo y promocion de MkrCart, MkrMed y nuevos productos",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.35",
+    "vue-router": "^5.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.7",
+    "vite": "^7.3.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}

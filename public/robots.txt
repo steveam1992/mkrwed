@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: cambia el dominio cuando publiques
+Sitemap: https://mkrsolutions.mx/sitemap.xml

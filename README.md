@@ -1,7 +1,7 @@
 # MKR Web
 
 Sitio web de **MKR Solutions**: catalogo y promocion de los sistemas de escritorio
-(**MkrCart**, **MkrMed** y los que vengan).
+(**MkrCart**, **MkrMed**, **MkrRH** y los que vengan).
 
 Vue 3 + Vite + Vue Router, sin backend. Todo el contenido sale de dos archivos de datos.
 
@@ -33,15 +33,15 @@ Busca los comentarios `TODO:` — marcan cada dato de ejemplo que hay que reempl
 1. En `src/data/productos.js`, copia un bloque completo de `productos` y cambia los datos.
 2. El `slug` define su direccion: `slug: 'mkrfix'` genera `/productos/mkrfix`.
 3. Aparece solo en el menu, en el inicio, en el footer, en precios y en el selector del formulario.
-4. Para la imagen usa `mockup: 'cart'` o `mockup: 'med'` mientras no tenga la suya (ver abajo).
+4. Para la imagen usa `mockup: 'cart'`, `mockup: 'med'` o `mockup: 'rh'` mientras no tenga la suya (ver abajo).
 
 Un producto que todavia no esta listo va en el arreglo `proximos` del mismo archivo, no en
 `productos`: se muestra en la seccion "Lo que viene" sin pagina propia.
 
 ## Capturas de pantalla
 
-Ahora mismo las pantallas de las apps son dibujos en SVG (`src/components/MockupCart.vue` y
-`MockupMed.vue`), no capturas reales. Cuando tengas capturas:
+Ahora mismo las pantallas de las apps son dibujos en SVG (`src/components/MockupCart.vue`,
+`MockupMed.vue` y `MockupRh.vue`), no capturas reales. Cuando tengas capturas:
 
 1. Guardalas en `public/capturas/` (por ejemplo `mkrcart-ventas.png`).
 2. En el componente correspondiente, cambia el bloque `<svg>...</svg>` por:
@@ -49,7 +49,7 @@ Ahora mismo las pantallas de las apps son dibujos en SVG (`src/components/Mockup
    <img src="/capturas/mkrcart-ventas.png" alt="Pantalla de ventas de MkrCart" />
    ```
 
-Los datos de los mockups (nombres de clientes, medicamentos, precios) son inventados y estan al
+Los datos de los mockups (nombres de clientes, medicamentos, sueldos) son inventados y estan al
 final de cada componente, en `<script setup>`, si quieres cambiarlos.
 
 ## Formulario de contacto

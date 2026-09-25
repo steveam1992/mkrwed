@@ -15,9 +15,10 @@
         </h1>
 
         <p class="lede">
-          En {{ site.marca }} desarrollamos software para negocios y consultorios: punto de venta e
-          inventario con <strong>MkrCart</strong>, y agenda, expediente clinico y recetas con
-          <strong>MkrMed</strong>. Se instalan en tu equipo y la informacion se queda contigo.
+          En {{ site.marca }} desarrollamos software para negocios, consultorios y areas de
+          recursos humanos: punto de venta e inventario con <strong>MkrCart</strong>, agenda y
+          expediente clinico con <strong>MkrMed</strong>, y personal y nomina con
+          <strong>MkrRH</strong>. Se instalan en tu equipo y la informacion se queda contigo.
         </p>
 
         <div class="btn-row mt-m">
@@ -53,7 +54,7 @@
     <div class="container">
       <div class="section__head">
         <span class="eyebrow">Nuestros productos</span>
-        <h2>Dos sistemas listos para instalar hoy</h2>
+        <h2>Tres sistemas listos para instalar hoy</h2>
         <p class="lede">
           Cada uno resuelve una operacion completa, no una parte. Estan construidos sobre la misma
           base: rapidos, locales y con documentos listos para imprimir.
@@ -277,7 +278,7 @@ function acento(p) {
   position: relative;
 }
 
-/* Las dos apps: MkrMed asomando detras de MkrCart */
+/* Dos de las apps: MkrMed asomando detras de MkrCart */
 .stack {
   position: relative;
 }

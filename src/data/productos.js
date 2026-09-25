@@ -217,6 +217,125 @@ export const productos = [
         r: 'Desde Ajustes se crea una copia consistente de toda la base en un archivo, que puedes guardar en un disco externo o en la nube que tu uses. Desde el mismo lugar se restaura.'
       }
     ]
+  },
+
+  {
+    slug: 'mkrrh',
+    nombre: 'MkrRH',
+    categoria: 'Recursos humanos y nomina',
+    tagline: 'Tu plantilla, las incidencias y la nomina calculada, en un solo sistema',
+    color: '#0E8F6B',
+    colorDark: '#0A6E52',
+    colorSoft: '#E6F8F4',
+    mockup: 'rh',
+    disponible: true,
+
+    resumen:
+      'MkrRH lleva el expediente de tu personal y calcula la nomina periodo tras periodo. Registra a cada empleado con su contrato, su salario y sus documentos, controla la asistencia, las vacaciones conforme a la Ley Federal del Trabajo, las incapacidades y los permisos, y con esa informacion genera los recibos con ISR, cuota del IMSS, horas extra y descuentos de INFONAVIT, FONACOT o prestamos. Cuando alguien causa baja, calcula el finiquito antes de confirmarla.',
+
+    paraQuien: [
+      'Empresas de 10 a 200 empleados',
+      'Restaurantes y cadenas con varias sucursales',
+      'Talleres y plantas de produccion',
+      'Comercios con varios turnos',
+      'Despachos contables que llevan nomina',
+      'Areas de recursos humanos que hoy usan Excel'
+    ],
+
+    highlights: [
+      { icon: 'cash', texto: 'Nomina con ISR, IMSS, horas extra y descuentos ya calculados' },
+      { icon: 'calendar', texto: 'Vacaciones conforme a la LFT, con el saldo de cada empleado al dia' },
+      { icon: 'clock', texto: 'Asistencia, faltas, retardos y horas extra capturadas por dia' },
+      { icon: 'file', texto: 'Recibos de nomina en PDF y reportes exportables a Excel' }
+    ],
+
+    modulos: [
+      {
+        icon: 'badge',
+        nombre: 'Empleados',
+        desc: 'Alta con datos personales, CURP, RFC y NSS, contrato, salario diario e integrado, jornada, dias de descanso, banco y CLABE. Numero de empleado automatico.'
+      },
+      {
+        icon: 'clock',
+        nombre: 'Asistencia',
+        desc: 'Captura por dia o por lote de asistencia, falta, retardo, permiso, descanso y festivo, con las horas extra que despues se pagan en el recibo.'
+      },
+      {
+        icon: 'calendar',
+        nombre: 'Vacaciones',
+        desc: 'Dias generados por antiguedad segun la tabla de la LFT, dias tomados, ajustes manuales y saldo disponible, con aviso de los periodos por vencer.'
+      },
+      {
+        icon: 'firstAid',
+        nombre: 'Incapacidades y permisos',
+        desc: 'Incapacidades del IMSS por enfermedad, riesgo de trabajo o maternidad, y permisos con o sin goce de sueldo, que se descuentan solos en la nomina.'
+      },
+      {
+        icon: 'cash',
+        nombre: 'Nomina',
+        desc: 'Periodos semanal, catorcenal, quincenal o mensual. Calcula ISR, cuota obrera del IMSS, horas extra, aguinaldo y prima vacacional, y cierra el periodo.'
+      },
+      {
+        icon: 'exit',
+        nombre: 'Bajas y finiquitos',
+        desc: 'Calculo previo del finiquito con vacaciones pendientes, prima vacacional, aguinaldo proporcional y salarios devengados, antes de confirmar la baja.'
+      },
+      {
+        icon: 'folder',
+        nombre: 'Expediente digital',
+        desc: 'Contrato, identificacion, comprobantes y demas papeles guardados por empleado, con aviso de los documentos vencidos o proximos a vencer.'
+      },
+      {
+        icon: 'org',
+        nombre: 'Organigrama',
+        desc: 'Estructura por departamento y puesto con el jefe directo de cada persona, para ver de un vistazo como esta armada la plantilla.'
+      },
+      {
+        icon: 'chart',
+        nombre: 'Reportes',
+        desc: 'Plantilla, saldos de vacaciones, incidencias, nomina por periodo, bajas y finiquitos, documentos por vencer e incapacidades. Exportables a Excel.'
+      },
+      {
+        icon: 'settings',
+        nombre: 'Ajustes y catalogos',
+        desc: 'Datos de la empresa, departamentos y puestos, dias festivos, tabla de vacaciones, tarifa de ISR, UMA, usuarios por rol y respaldos de la base.'
+      }
+    ],
+
+    // TODO: precios de ejemplo, reemplaza las cifras
+    precio: {
+      licencia: '$14,900',
+      licenciaNota: 'Pago unico por equipo, incluye instalacion y capacitacion',
+      soporte: '$3,600 al ano',
+      soporteNota: 'Opcional: soporte, ajustes menores y actualizaciones'
+    },
+
+    faq: [
+      {
+        p: 'Calcula el ISR y las cuotas del IMSS?',
+        r: 'Si. El recibo calcula el ISR con la tarifa del articulo 96 y la cuota obrera del IMSS a partir del salario base de cotizacion. La tarifa, la UMA y el subsidio quedan editables en Ajustes para que los actualices cuando cambien.'
+      },
+      {
+        p: 'Timbra los recibos ante el SAT?',
+        r: 'No. MkrRH genera el recibo en PDF con percepciones, deducciones y neto a pagar, pero no emite CFDI de nomina. Si necesitas el timbrado, se cotiza como modulo a la medida.'
+      },
+      {
+        p: 'Como quedan las vacaciones con la reforma?',
+        r: 'La tabla de dias por ano de antiguedad viene cargada con la vigente y se edita en Ajustes, asi que los saldos salen conforme a la LFT. Si la ley vuelve a cambiar, solo se actualiza la tabla.'
+      },
+      {
+        p: 'Quien puede ver los sueldos?',
+        r: 'Cada persona entra con su usuario y su rol. Consulta solo lee, supervisor captura incidencias, y recursos humanos y administrador operan todo, incluida la nomina.'
+      },
+      {
+        p: 'Puedo llevar mas de una empresa?',
+        r: 'Cada instalacion lleva una empresa con su propia base de datos. Si eres despacho y manejas varias, se instala una copia por empresa o lo cotizamos como version multiempresa.'
+      },
+      {
+        p: 'Como cargo mi plantilla actual?',
+        r: 'Nos pasas tu lista en Excel y la cargamos como parte de la instalacion. De ahi en adelante el alta y la baja de personal la haces tu desde el sistema.'
+      }
+    ]
   }
 ]
 

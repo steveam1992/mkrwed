@@ -11,7 +11,7 @@ export const site = {
 
   // Frase corta que aparece en el footer y en metadatos
   descripcion:
-    'Desarrollamos sistemas de escritorio para negocios y consultorios: funcionan sin internet y la informacion se queda en tu equipo.',
+    'Desarrollamos sistemas de escritorio para negocios, consultorios y areas de recursos humanos: funcionan sin internet y la informacion se queda en tu equipo.',
 
   // TODO: reemplaza con tus datos reales
   contacto: {

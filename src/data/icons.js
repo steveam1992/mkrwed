@@ -33,6 +33,10 @@ export const icons = {
   lock: s('<rect x="3.5" y="8.5" width="13" height="9" rx="2"/><path d="M6.8 8.5V6.2a3.2 3.2 0 0 1 6.4 0v2.3"/>'),
   refresh: s('<path d="M16.5 8.5A6.5 6.5 0 0 0 5 5.6M3.5 11.5A6.5 6.5 0 0 0 15 14.4"/><path d="M16.8 4.5v4h-4M3.2 15.5v-4h4"/>'),
   print: s('<path d="M5.5 7V3h9v4"/><rect x="2.5" y="7" width="15" height="6.5" rx="1.5"/><path d="M5.5 11.5h9V17h-9z"/>'),
+  badge: s('<rect x="3.5" y="2.5" width="13" height="15" rx="2.5"/><path d="M7.5 2.5h5V5h-5z"/><circle cx="10" cy="9.4" r="2"/><path d="M6.6 15a3.4 3.4 0 0 1 6.8 0"/>'),
+  org: s('<rect x="7.5" y="2.5" width="5" height="4" rx="1.2"/><rect x="2" y="13.5" width="5" height="4" rx="1.2"/><rect x="13" y="13.5" width="5" height="4" rx="1.2"/><path d="M10 6.5v3M4.5 13.5v-3h11v3"/>'),
+  firstAid: s('<rect x="2" y="5.5" width="16" height="11" rx="2.5"/><path d="M7 5.5V4a1.5 1.5 0 0 1 1.5-1.5h3A1.5 1.5 0 0 1 13 4v1.5"/><path d="M10 8.8v4.4M7.8 11h4.4"/>'),
+  exit: s('<path d="M10 3.5H5A1.5 1.5 0 0 0 3.5 5v10A1.5 1.5 0 0 0 5 16.5h5"/><path d="M17 10h-6.6M14.2 7.2 17 10l-2.8 2.8"/>'),
   tag: s('<path d="M10.6 2.5H16a1.5 1.5 0 0 1 1.5 1.5v5.4a1.5 1.5 0 0 1-.44 1.06l-6 6a1.5 1.5 0 0 1-2.12 0l-5.4-5.4a1.5 1.5 0 0 1 0-2.12l6-6A1.5 1.5 0 0 1 10.6 2.5z"/><circle cx="13.4" cy="6.6" r="1.1"/>')
 }
 

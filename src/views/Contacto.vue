@@ -67,7 +67,7 @@
               <option v-for="p in productos" :key="p.slug" :value="p.nombre">
                 {{ p.nombre }} — {{ p.categoria }}
               </option>
-              <option value="Los dos sistemas">Los dos sistemas</option>
+              <option value="Mas de un sistema">Mas de un sistema</option>
               <option value="Un sistema a la medida">Un sistema a la medida</option>
               <option value="Todavia no se">Todavia no se, quiero asesoria</option>
             </select>

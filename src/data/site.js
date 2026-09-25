@@ -20,7 +20,7 @@ export const site = {
     // El mismo numero, pero como quieres que se lea en pantalla
     whatsappVisible: '+52 612 108 8906',
     telefono: '+52 612 108 8906',
-    correo: 'contacto@mkrsolutions.mx',
+    correo: 'contacto.mkrsolutions@gmail.com',
     ciudad: 'La paz, B.C.S., México',
     horario: 'Lunes a viernes, 9:00 a 19:00 h'
   },

@@ -16,12 +16,12 @@ export const site = {
   // TODO: reemplaza con tus datos reales
   contacto: {
     // Numero en formato internacional SIN + ni espacios (asi lo pide wa.me)
-    whatsapp: '5213300000000',
+    whatsapp: '5216121088906',
     // El mismo numero, pero como quieres que se lea en pantalla
-    whatsappVisible: '+52 33 0000 0000',
-    telefono: '+52 33 0000 0000',
+    whatsappVisible: '+52 612 108 8906',
+    telefono: '+52 612 108 8906',
     correo: 'contacto@mkrsolutions.mx',
-    ciudad: 'Guadalajara, Jalisco, Mexico',
+    ciudad: 'La paz, B.C.S., México',
     horario: 'Lunes a viernes, 9:00 a 19:00 h'
   },
 

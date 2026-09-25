@@ -40,9 +40,9 @@
 
       <div class="footer__bottom">
         <span>&copy; {{ anio }} {{ site.marca }}. Todos los derechos reservados.</span>
-        <span class="footer__note">
-          Hecho con Vue 3 y Vite. Los sistemas de escritorio corren sobre Electron.
-        </span>
+        <RouterLink to="/terminos-y-condiciones" class="footer__legal">
+          Terminos y condiciones
+        </RouterLink>
       </div>
     </div>
   </footer>
@@ -121,6 +121,14 @@ const redes = computed(() =>
 
 .footer__plain {
   color: rgba(255, 255, 255, 0.42);
+}
+
+.footer__legal {
+  color: var(--on-dark-2);
+}
+
+.footer__legal:hover {
+  color: #fff;
 }
 
 .footer__bottom {

@@ -23,6 +23,12 @@ const routes = [
     component: () => import('../views/Contacto.vue'),
     meta: { title: 'Contacto y demostracion' }
   },
+  {
+    path: '/terminos-y-condiciones',
+    name: 'terminos',
+    component: () => import('../views/Terminos.vue'),
+    meta: { title: 'Terminos y condiciones' }
+  },
   { path: '/:pathMatch(.*)*', name: 'noEncontrado', component: () => import('../views/NotFound.vue') }
 ]
 

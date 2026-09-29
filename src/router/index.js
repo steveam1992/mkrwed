@@ -4,7 +4,7 @@ import { site } from '../data/site'
 import { getProducto } from '../data/productos'
 
 const routes = [
-  { path: '/', name: 'home', component: Home, meta: { title: 'Software de escritorio para negocios, consultorios y recursos humanos' } },
+  { path: '/', name: 'home', component: Home, meta: { title: 'Software para tu negocios' } },
   {
     path: '/productos/:slug',
     name: 'producto',

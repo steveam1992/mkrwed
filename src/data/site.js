@@ -43,7 +43,7 @@ export const site = {
       'Instalacion y configuracion inicial en tu equipo',
       'Carga de tu catalogo o lista inicial de datos',
       'Capacitacion de hasta 2 horas para tu personal',
-      'Actualizaciones menores del primer ano'
+      'Actualizaciones menores del primer año'
     ],
     // Servicios extra que se cotizan aparte
     adicionales: [

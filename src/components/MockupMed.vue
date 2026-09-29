@@ -88,7 +88,7 @@
       <text x="572" y="142" class="t-rx-dim">Ced. Prof. 0000000</text>
 
       <text x="552" y="180" class="t-rx-lbl">PACIENTE</text>
-      <text x="552" y="194" class="t-rx-val">Maria Elena Torres, 42 anos</text>
+      <text x="552" y="194" class="t-rx-val">Maria Elena Torres, 42 años</text>
       <line x1="552" y1="204" x2="710" y2="204" stroke="#EDF4F5" />
 
       <text x="552" y="222" class="t-rx-lbl">DIAGNOSTICO</text>

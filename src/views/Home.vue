@@ -123,7 +123,7 @@
         <h2>Software que se adapta a como trabajas</h2>
         <p class="lede" style="margin-inline: auto">
           Nada de sistemas en la nube que se caen justo en la hora pico, ni suscripciones que
-          crecen cada ano.
+          crecen cada año.
         </p>
       </div>
 

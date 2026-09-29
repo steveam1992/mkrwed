@@ -85,9 +85,9 @@ export const productos = [
 
     // TODO: precios de ejemplo, reemplaza las cifras
     precio: {
-      licencia: '$8,900',
+      licencia: '$5,000',
       licenciaNota: 'Pago unico por equipo, incluye instalacion y capacitacion',
-      soporte: '$2,400 al ano',
+      soporte: '$1,000 al año',
       soporteNota: 'Opcional: soporte, ajustes menores y actualizaciones'
     },
 
@@ -189,9 +189,9 @@ export const productos = [
 
     // TODO: precios de ejemplo, reemplaza las cifras
     precio: {
-      licencia: '$11,900',
+      licencia: '$8,000',
       licenciaNota: 'Pago unico por equipo, incluye instalacion y capacitacion',
-      soporte: '$2,900 al ano',
+      soporte: '$2,900 al año',
       soporteNota: 'Opcional: soporte, ajustes menores y actualizaciones'
     },
 
@@ -304,9 +304,9 @@ export const productos = [
 
     // TODO: precios de ejemplo, reemplaza las cifras
     precio: {
-      licencia: '$14,900',
+      licencia: '$10,000',
       licenciaNota: 'Pago unico por equipo, incluye instalacion y capacitacion',
-      soporte: '$3,600 al ano',
+      soporte: '$3,600 al año',
       soporteNota: 'Opcional: soporte, ajustes menores y actualizaciones'
     },
 
@@ -321,7 +321,7 @@ export const productos = [
       },
       {
         p: 'Como quedan las vacaciones con la reforma?',
-        r: 'La tabla de dias por ano de antiguedad viene cargada con la vigente y se edita en Ajustes, asi que los saldos salen conforme a la LFT. Si la ley vuelve a cambiar, solo se actualiza la tabla.'
+        r: 'La tabla de dias por año de antiguedad viene cargada con la vigente y se edita en Ajustes, asi que los saldos salen conforme a la LFT. Si la ley vuelve a cambiar, solo se actualiza la tabla.'
       },
       {
         p: 'Quien puede ver los sueldos?',

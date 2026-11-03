@@ -231,7 +231,7 @@ export const productos = [
     disponible: true,
 
     resumen:
-      'MkrRH lleva el expediente de tu personal y calcula la nomina periodo tras periodo. Registra a cada empleado con su contrato, su salario y sus documentos, controla la asistencia, las vacaciones conforme a la Ley Federal del Trabajo, las incapacidades y los permisos, y con esa informacion genera los recibos con ISR, cuota del IMSS, horas extra y descuentos de INFONAVIT, FONACOT o prestamos. Cuando alguien causa baja, calcula el finiquito antes de confirmarla.',
+      'MkrRH lleva el expediente de tu personal y calcula la nomina periodo tras periodo. Registra a cada empleado con su contrato, su salario y sus documentos, controla la asistencia, las vacaciones conforme a la Ley Federal del Trabajo, las incapacidades y los permisos, y con esa informacion genera los recibos con ISR, cuota del IMSS, horas extra y descuentos de INFONAVIT, FONACOT o prestamos. Cuando alguien causa baja, calcula el finiquito antes de confirmarla. Tambien contamos con la version de checador en linea, para que tu personal marque entrada y salida desde el navegador, disponible en renta mensual.',
 
     paraQuien: [
       'Empresas de 10 a 200 empleados',
@@ -246,7 +246,8 @@ export const productos = [
       { icon: 'cash', texto: 'Nomina con ISR, IMSS, horas extra y descuentos ya calculados' },
       { icon: 'calendar', texto: 'Vacaciones conforme a la LFT, con el saldo de cada empleado al dia' },
       { icon: 'clock', texto: 'Asistencia, faltas, retardos y horas extra capturadas por dia' },
-      { icon: 'file', texto: 'Recibos de nomina en PDF y reportes exportables a Excel' }
+      { icon: 'file', texto: 'Recibos de nomina en PDF y reportes exportables a Excel' },
+      { icon: 'clock', texto: 'Checador en linea: tu personal marca desde el navegador, en renta mensual' }
     ],
 
     modulos: [
@@ -259,6 +260,11 @@ export const productos = [
         icon: 'clock',
         nombre: 'Asistencia',
         desc: 'Captura por dia o por lote de asistencia, falta, retardo, permiso, descanso y festivo, con las horas extra que despues se pagan en el recibo.'
+      },
+      {
+        icon: 'clock',
+        nombre: 'Checador en linea',
+        desc: 'Cada empleado marca entrada y salida desde el navegador con su numero y un PIN, y RH ve la asistencia en vivo. Se sincroniza con el sistema de escritorio. Se ofrece en renta mensual.'
       },
       {
         icon: 'calendar',
@@ -307,13 +313,24 @@ export const productos = [
       licencia: '$10,000',
       licenciaNota: 'Pago unico por equipo, incluye instalacion y capacitacion',
       soporte: '$3,600 al año',
-      soporteNota: 'Opcional: soporte, ajustes menores y actualizaciones'
+      soporteNota: 'Opcional: soporte, ajustes menores y actualizaciones',
+      // Version en linea: se renta, no se compra.
+      enLinea: {
+        nombre: 'Checador en linea',
+        renta: '$3,500',
+        periodo: 'al mes',
+        nota: 'Renta mensual del checador web: marcaje de entrada y salida desde el navegador, panel de asistencia en vivo y sincronizacion con MkrRH. Sin pago de licencia.'
+      }
     },
 
     faq: [
       {
         p: 'Calcula el ISR y las cuotas del IMSS?',
         r: 'Si. El recibo calcula el ISR con la tarifa del articulo 96 y la cuota obrera del IMSS a partir del salario base de cotizacion. La tarifa, la UMA y el subsidio quedan editables en Ajustes para que los actualices cuando cambien.'
+      },
+      {
+        p: 'Tienen version de checador en linea?',
+        r: 'Si. Ademas del sistema de escritorio ofrecemos el checador en linea: tus empleados marcan entrada y salida desde el navegador con su numero y un PIN, y RH ve la asistencia al momento. Se contrata en renta mensual de $3,500, sin pagar licencia, y se sincroniza con MkrRH.'
       },
       {
         p: 'Timbra los recibos ante el SAT?',

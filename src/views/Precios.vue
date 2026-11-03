@@ -4,7 +4,7 @@
       <span class="eyebrow" style="color: #a99cff">Precios</span>
       <h1 class="mt-s">Pagas la licencia una vez</h1>
       <p class="lede mt-s">
-        Sin renta mensual obligatoria y sin limite de ventas, pacientes o registros. El soporte
+        Sin renta mensual obligatoria en los sistemas de escritorio (el checador en linea de MkrRH si se renta por mes) y sin limite de ventas, pacientes o registros. El soporte
         anual es opcional: si no lo renuevas, tu sistema sigue funcionando igual.
       </p>
     </div>
@@ -32,6 +32,11 @@
               <strong>Soporte anual {{ p.precio.soporte }}</strong>
               <p class="muted small">{{ p.precio.soporteNota }}</p>
             </div>
+          </div>
+
+          <div v-if="p.precio.enLinea" class="plan__renta">
+            <strong>{{ p.precio.enLinea.nombre }}: {{ p.precio.enLinea.renta }} {{ p.precio.enLinea.periodo }}</strong>
+            <p class="muted small">{{ p.precio.enLinea.nota }}</p>
           </div>
 
           <p class="plan__label">Modulos incluidos</p>
@@ -242,6 +247,17 @@ const faqPrecios = [
 }
 
 .plan__soporte strong {
+  font-size: 0.98rem;
+}
+
+.plan__renta {
+  margin: 0 0 22px;
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  border: 1px dashed var(--accent);
+}
+
+.plan__renta strong {
   font-size: 0.98rem;
 }
 

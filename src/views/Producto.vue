@@ -121,6 +121,11 @@
             <span class="muted small">{{ producto.precio.soporteNota }}</span>
           </div>
 
+          <div v-if="producto.precio.enLinea" class="precio__renta">
+            <strong>{{ producto.precio.enLinea.nombre }}: {{ producto.precio.enLinea.renta }} {{ producto.precio.enLinea.periodo }}</strong>
+            <span class="muted small">{{ producto.precio.enLinea.nota }}</span>
+          </div>
+
           <ul class="checklist mt-m">
             <li v-for="i in site.precios.incluyeSiempre" :key="i">
               <span v-html="icons.check"></span>
@@ -367,6 +372,20 @@ const acento = computed(() =>
   display: flex;
   flex-direction: column;
   gap: 2px;
+}
+
+.precio__renta {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.precio__renta strong {
+  font-size: 1.05rem;
 }
 
 .precio__soporte strong {

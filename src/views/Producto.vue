@@ -116,7 +116,7 @@
           </p>
           <p class="muted small">{{ producto.precio.licenciaNota }}</p>
 
-          <div class="precio__soporte">
+          <div v-if="producto.precio.soporte" class="precio__soporte">
             <strong>{{ producto.precio.soporte }}</strong>
             <span class="muted small">{{ producto.precio.soporteNota }}</span>
           </div>

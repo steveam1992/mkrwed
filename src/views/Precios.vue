@@ -26,7 +26,7 @@
           </p>
           <p class="muted small">{{ p.precio.licenciaNota }}</p>
 
-          <div class="plan__soporte">
+          <div v-if="p.precio.soporte" class="plan__soporte">
             <span v-html="icons.shield"></span>
             <div>
               <strong>Soporte anual {{ p.precio.soporte }}</strong>

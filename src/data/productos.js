@@ -312,8 +312,6 @@ export const productos = [
     precio: {
       licencia: '$10,000',
       licenciaNota: 'Pago unico por equipo, incluye instalacion y capacitacion',
-      soporte: '$3,600 al año',
-      soporteNota: 'Opcional: soporte, ajustes menores y actualizaciones',
       // Version en linea: se renta, no se compra.
       enLinea: {
         nombre: 'Checador en linea',

@@ -310,8 +310,6 @@ export const productos = [
 
     // TODO: precios de ejemplo, reemplaza las cifras
     precio: {
-      licencia: '$10,000',
-      licenciaNota: 'Pago unico por equipo, incluye instalacion y capacitacion',
       // Version en linea: se renta, no se compra.
       enLinea: {
         nombre: 'Checador en linea',

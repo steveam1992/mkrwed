@@ -110,11 +110,11 @@
       <div class="container precio">
         <div class="precio__card card">
           <span class="pill pill--accent">{{ producto.nombre }}</span>
-          <p class="precio__monto">
+          <p v-if="producto.precio.licencia" class="precio__monto">
             {{ producto.precio.licencia }}
             <span>{{ site.precios.moneda }}</span>
           </p>
-          <p class="muted small">{{ producto.precio.licenciaNota }}</p>
+          <p v-if="producto.precio.licencia" class="muted small">{{ producto.precio.licenciaNota }}</p>
 
           <div v-if="producto.precio.soporte" class="precio__soporte">
             <strong>{{ producto.precio.soporte }}</strong>

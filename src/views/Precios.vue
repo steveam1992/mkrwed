@@ -20,11 +20,11 @@
             <p class="muted small">{{ p.tagline }}</p>
           </div>
 
-          <p class="plan__monto">
+          <p v-if="p.precio.licencia" class="plan__monto">
             {{ p.precio.licencia }}
             <span>{{ site.precios.moneda }} / pago unico</span>
           </p>
-          <p class="muted small">{{ p.precio.licenciaNota }}</p>
+          <p v-if="p.precio.licencia" class="muted small">{{ p.precio.licenciaNota }}</p>
 
           <div v-if="p.precio.soporte" class="plan__soporte">
             <span v-html="icons.shield"></span>

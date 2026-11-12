@@ -231,7 +231,7 @@ export const productos = [
     disponible: true,
 
     resumen:
-      'MkrRH lleva el expediente de tu personal y calcula la nomina periodo tras periodo. Registra a cada empleado con su contrato, su salario y sus documentos, controla la asistencia, las vacaciones conforme a la Ley Federal del Trabajo, las incapacidades y los permisos, y con esa informacion genera los recibos con ISR, cuota del IMSS, horas extra y descuentos de INFONAVIT, FONACOT o prestamos. Cuando alguien causa baja, calcula el finiquito antes de confirmarla. Tambien contamos con la version de checador en linea, para que tu personal marque entrada y salida desde el navegador, disponible en renta mensual.',
+      'MkrRH lleva el expediente de tu personal y calcula la nomina periodo tras periodo. Registra a cada empleado con su contrato, su salario y sus documentos, controla la asistencia, las vacaciones conforme a la Ley Federal del Trabajo, las incapacidades y los permisos, y con esa informacion genera los recibos con ISR, cuota del IMSS, horas extra y descuentos de INFONAVIT, FONACOT o prestamos. Cuando alguien causa baja, calcula el finiquito antes de confirmarla. Tambien contamos con la version de checador en linea, para que tu personal marque entrada y salida desde el navegador, disponible en planes mensuales o anuales.',
 
     paraQuien: [
       'Empresas de 10 a 200 empleados',
@@ -247,7 +247,7 @@ export const productos = [
       { icon: 'calendar', texto: 'Vacaciones conforme a la LFT, con el saldo de cada empleado al dia' },
       { icon: 'clock', texto: 'Asistencia, faltas, retardos y horas extra capturadas por dia' },
       { icon: 'file', texto: 'Recibos de nomina en PDF y reportes exportables a Excel' },
-      { icon: 'clock', texto: 'Checador en linea: tu personal marca desde el navegador, en renta mensual' }
+      { icon: 'clock', texto: 'Checador en linea: tu personal marca desde el navegador, en planes mensuales o anuales' }
     ],
 
     modulos: [
@@ -264,7 +264,7 @@ export const productos = [
       {
         icon: 'clock',
         nombre: 'Checador en linea',
-        desc: 'Cada empleado marca entrada y salida desde el navegador con su numero y un PIN, y RH ve la asistencia en vivo. Se sincroniza con el sistema de escritorio. Se ofrece en renta mensual.'
+        desc: 'Cada empleado marca entrada y salida desde el navegador con su numero y un PIN, y RH ve la asistencia en vivo. Se sincroniza con el sistema de escritorio. Se ofrece en planes mensuales o anuales.'
       },
       {
         icon: 'calendar',
@@ -317,9 +317,14 @@ export const productos = [
       // Version en linea: se renta, no se compra.
       enLinea: {
         nombre: 'Checador en linea',
-        renta: '$3,500',
-        periodo: 'al mes',
-        nota: 'Renta mensual del checador web: marcaje de entrada y salida desde el navegador, panel de asistencia en vivo y sincronizacion con MkrRH. Sin pago de licencia.'
+        titulo: 'Planes mensuales o anuales',
+        subtitulo: 'Con pago anual, 3 meses gratis.',
+        nota: 'Renta del checador web: marcaje de entrada y salida desde el navegador, panel de asistencia en vivo y sincronizacion con MkrRH. Sin pago de licencia.',
+        planes: [
+          { empleados: 'Hasta 250 empleados', mensual: '$3,500', anual: '$31,500' },
+          { empleados: 'Hasta 1,200 empleados', mensual: '$8,000', anual: '$72,000' },
+          { empleados: 'Hasta 6,000 empleados', mensual: '$15,000', anual: '$135,000' }
+        ]
       }
     },
 
@@ -330,7 +335,7 @@ export const productos = [
       },
       {
         p: 'Tienen version de checador en linea?',
-        r: 'Si. Ademas del sistema de escritorio ofrecemos el checador en linea: tus empleados marcan entrada y salida desde el navegador con su numero y un PIN, y RH ve la asistencia al momento. Se contrata en renta mensual de $3,500, sin pagar licencia, y se sincroniza con MkrRH.'
+        r: 'Si. Ademas del sistema de escritorio ofrecemos el checador en linea: tus empleados marcan entrada y salida desde el navegador con su numero y un PIN, y RH ve la asistencia al momento. Se contrata por plan mensual o anual segun el numero de empleados (desde $3,500 al mes, con 3 meses gratis en el pago anual), sin pagar licencia, y se sincroniza con MkrRH.'
       },
       {
         p: 'Timbra los recibos ante el SAT?',

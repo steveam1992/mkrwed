@@ -122,8 +122,15 @@
           </div>
 
           <div v-if="producto.precio.enLinea" class="precio__renta">
-            <strong>{{ producto.precio.enLinea.nombre }}: {{ producto.precio.enLinea.renta }} {{ producto.precio.enLinea.periodo }}</strong>
-            <span class="muted small">{{ producto.precio.enLinea.nota }}</span>
+            <strong>{{ producto.precio.enLinea.nombre }}: {{ producto.precio.enLinea.titulo }}</strong>
+            <span class="muted small">{{ producto.precio.enLinea.subtitulo }} {{ producto.precio.enLinea.nota }}</span>
+            <ul class="renta-planes">
+              <li v-for="r in producto.precio.enLinea.planes" :key="r.empleados">
+                <span>{{ r.empleados }}</span>
+                <b>{{ r.mensual }} <small>al mes</small></b>
+                <em>Al año: {{ r.anual }} · 3 meses gratis</em>
+              </li>
+            </ul>
           </div>
 
           <ul class="checklist mt-m">
@@ -382,6 +389,38 @@ const acento = computed(() =>
   display: flex;
   flex-direction: column;
   gap: 2px;
+}
+
+.renta-planes {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.renta-planes li {
+  display: grid;
+  gap: 2px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.renta-planes b {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+}
+
+.renta-planes small {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-3);
+}
+
+.renta-planes em {
+  font-style: normal;
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
 .precio__renta strong {

@@ -4,7 +4,7 @@
       <span class="eyebrow" style="color: #a99cff">Precios</span>
       <h1 class="mt-s">Pagas la licencia una vez</h1>
       <p class="lede mt-s">
-        Sin renta mensual obligatoria en los sistemas de escritorio (el checador en linea de MkrRH si se renta por mes) y sin limite de ventas, pacientes o registros. El soporte
+        Sin renta mensual obligatoria en los sistemas de escritorio (el checador en linea de MkrRH si se renta por plan mensual o anual) y sin limite de ventas, pacientes o registros. El soporte
         anual es opcional: si no lo renuevas, tu sistema sigue funcionando igual.
       </p>
     </div>
@@ -35,8 +35,15 @@
           </div>
 
           <div v-if="p.precio.enLinea" class="plan__renta">
-            <strong>{{ p.precio.enLinea.nombre }}: {{ p.precio.enLinea.renta }} {{ p.precio.enLinea.periodo }}</strong>
-            <p class="muted small">{{ p.precio.enLinea.nota }}</p>
+            <strong>{{ p.precio.enLinea.nombre }}: {{ p.precio.enLinea.titulo }}</strong>
+            <p class="muted small">{{ p.precio.enLinea.subtitulo }} {{ p.precio.enLinea.nota }}</p>
+            <ul class="renta-planes">
+              <li v-for="r in p.precio.enLinea.planes" :key="r.empleados">
+                <span>{{ r.empleados }}</span>
+                <b>{{ r.mensual }} <small>al mes</small></b>
+                <em>Al año: {{ r.anual }} · 3 meses gratis</em>
+              </li>
+            </ul>
           </div>
 
           <p class="plan__label">Modulos incluidos</p>
@@ -259,6 +266,39 @@ const faqPrecios = [
 
 .plan__renta strong {
   font-size: 0.98rem;
+}
+
+.renta-planes {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.renta-planes li {
+  display: grid;
+  gap: 2px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.renta-planes b {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+}
+
+.renta-planes small {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-3);
+}
+
+.renta-planes em {
+  font-style: normal;
+  font-size: 0.85rem;
+  color: var(--accent-dark);
+  font-weight: 600;
 }
 
 .plan__label {
